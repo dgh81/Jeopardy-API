@@ -1,0 +1,50 @@
+body {
+ font-family: sans-serif;
+}
+
+h1 {
+ font-size: 70px;
+ margin: 0;
+}
+
+table {
+ border: 1px solid black;
+ font-size: x-large;
+ width: 100%;
+}
+
+table th {
+ background-color: black;
+ color: white;
+}
+
+table td {
+ border-bottom: 1px solid;
+}
+
+table.center {
+ margin-left: auto;
+ margin-right: auto;
+}
+
+select, label{
+ font-size: larger;
+ 
+}
+
+.labelContainer {
+ position: relative;
+ justify-content: space-between;
+ margin-bottom: 20px;
+}
+
+.labelYear {
+ display: flex;
+ display: inline-block;
+ width: 30%;
+}
+
+.labelCat {
+ display: inline-block;
+ width: 65%;
+}

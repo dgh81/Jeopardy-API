@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+ <h1>JEOPARDY</h1>
+ 
+ <!-- Undgå denne fejl:
+ https://bobbyhadz.com/blog/typescript-uncaught-referenceerror-exports-is-not-defined#:~:text=To%20solve%20the%20%22Uncaught%20ReferenceError,to%20module%20in%20your%20package.
+ med denne linje over script referencen: -->
+ <script>var exports = {};</script>
+ <script src="main.js"></script>
+</body>
+</html>
