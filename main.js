@@ -18,6 +18,8 @@ async function getQuestion() {
   // Alle spørgsmål i kategori 1:
   // const response = await fetch(`https://jservice.io/api/category?id=30`);
 
+
+  // Her får vi altid de samme 30 kategorier -> der skal nok laves en random generator:
   const response = await fetch(`https://jservice.io/api/categories?count=30`)
 
   const data = await response.json();
@@ -26,7 +28,14 @@ async function getQuestion() {
 
     for (i = 0; i < 30; i++){
 
-     console.log(data[i].title);
+     // TEST FOR TOMME KATEGORIER?:
+     if (data[i].clues_count >= 10){
+
+      console.log(data[i].title, data[i].id);
+
+     } else {
+      console.log("denne kategori indeholder ingen spørgsmål...")
+     }
 
     }
 
@@ -37,19 +46,29 @@ async function getQuestion() {
     //  console.log(data[0].title);
     //    }
 
+    //TMP:
+    localStorage.clear();
 
  } catch (e) {
   console.log(e);
   console.log("There was an error fetching the data");
  }
 };
-
 getQuestion();
 
-const Add = (x, y) => {
- return x+y;
+//  // window.localStorage kan skrives bare localStorage: (Max på 5MB på localStorage!!)
+function addListener(){
+ QuestionsForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  let submitter = event.submitter;
+  localStorage.setItem("questionValue", submitter.value);
+  //WEIRD. selvom property hedder data-cat, bruges dataset.cat til at fange den igen:
+  //Se evt.: https://stackoverflow.com/questions/71815082/how-can-i-get-custom-data-attribute
+
+  localStorage.setItem("questionCategoryId", submitter.dataset.cat_id);
+
+  window.location.href = "clues.html";
+  
+ });
 };
-
-exports.Add = Add;
-
-console.log(Add(2,3));
+addListener();

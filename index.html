@@ -9,7 +9,68 @@
 <body>
 
  <h1>JEOPARDY</h1>
+
+
+  <!-- Send selve Question objektet med som parameter i gotoQuestion()? -->
+  <!-- Tjek evt. denne som bruger en lidt anden mekanisme bla. sender et objekt med properties og anvender JSON stringify og parse:
+  https://www.youtube.com/watch?v=x0VcigW9kN0&ab_channel=OpenJavaScript -->
  
+
+  <!-- Lav denne dynamisk fra main.js api loop: -->
+ <form id="QuestionsForm">
+  <table>
+   <tr>
+    <th>Fiction</th>
+    <th>Islands</th>
+    <th>Weather</th>
+    <th>1960</th>
+    <th>Canada</th>
+    <th>Egypt</th>
+   </tr>
+   <tr>
+    <!-- Må ikke hedde catId !!!!!!! -->
+    <td><input value="100" type="submit" data-cat_id="89" class="btn"></td>
+    <td><input value="100" type="submit" data-cat_id="79" class="btn"></td>
+    <td><input value="100" type="submit" data-cat_id="19" class="btn"></td>
+    <td><input value="100" type="submit" data-cat_id="11" class="btn"></td>
+    <td><input value="100" type="submit" data-cat_id="26" class="btn"></td>
+    <td><input value="100" type="submit" data-cat_id="43" class="btn"></td>
+   </tr>
+   <tr>
+    <td><input value="200" type="submit" data-cat_id="89" class="btn"></td>
+    <td><input value="200" type="submit" data-cat_id="79" class="btn"></td>
+    <td><input value="200" type="submit" data-cat_id="19" class="btn"></td>
+    <td><input value="200" type="submit" data-cat_id="11" class="btn"></td>
+    <td><input value="200" type="submit" data-cat_id="26" class="btn"></td>
+    <td><input value="200" type="submit" data-cat_id="43" class="btn"></td>
+   </tr>
+   <tr>
+    <td><input value="300" type="submit" data-cat_id="89" class="btn"></td>
+    <td><input value="300" type="submit" data-cat_id="79" class="btn"></td>
+    <td><input value="300" type="submit" data-cat_id="19" class="btn"></td>
+    <td><input value="300" type="submit" data-cat_id="11" class="btn"></td>
+    <td><input value="300" type="submit" data-cat_id="26" class="btn"></td>
+    <td><input value="300" type="submit" data-cat_id="43" class="btn"></td>
+   </tr>
+   <tr>
+    <td><input value="400" type="submit" data-cat_id="89" class="btn"></td>
+    <td><input value="400" type="submit" data-cat_id="79" class="btn"></td>
+    <td><input value="400" type="submit" data-cat_id="19" class="btn"></td>
+    <td><input value="400" type="submit" data-cat_id="11" class="btn"></td>
+    <td><input value="400" type="submit" data-cat_id="26" class="btn"></td>
+    <td><input value="400" type="submit" data-cat_id="43" class="btn"></td>
+   </tr>
+   <tr>
+    <td><input value="500" type="submit" data-cat_id="89" class="btn"></td>
+    <td><input value="500" type="submit" data-cat_id="79" class="btn"></td>
+    <td><input value="500" type="submit" data-cat_id="19" class="btn"></td>
+    <td><input value="500" type="submit" data-cat_id="11" class="btn"></td>
+    <td><input value="500" type="submit" data-cat_id="26" class="btn"></td>
+    <td><input value="500" type="submit" data-cat_id="43" class="btn"></td>
+   </tr>
+  </table>
+ </form>
+
  <!-- Undgå denne fejl:
  https://bobbyhadz.com/blog/typescript-uncaught-referenceerror-exports-is-not-defined#:~:text=To%20solve%20the%20%22Uncaught%20ReferenceError,to%20module%20in%20your%20package.
  med denne linje over script referencen: -->

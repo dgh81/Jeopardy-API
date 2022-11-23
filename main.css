@@ -48,3 +48,7 @@ select, label{
  display: inline-block;
  width: 65%;
 }
+
+.btn {
+ width: 100%;
+}
