@@ -52,3 +52,8 @@ select, label{
 .btn {
  width: 100%;
 }
+
+.catSelector {
+ display: inline-block;
+ width: 15%;
+}
