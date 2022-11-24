@@ -48,6 +48,7 @@ async function getQuestion() {
 
     //TMP:
     localStorage.clear();
+    
 
  } catch (e) {
   console.log(e);
@@ -72,3 +73,5 @@ function addListener(){
  });
 };
 addListener();
+
+
